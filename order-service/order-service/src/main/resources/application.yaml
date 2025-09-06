@@ -1,0 +1,24 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: "@Rifamilly62"
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret-key: "ThisIsASuperSecureAndVeryLongSecretKey1234567890"
+  expiration-ms: 3600000
+
+catalog:
+  base-url: http://localhost:8082/api/v1
